@@ -1,10 +1,11 @@
+import './index.css'
+
 export default function Navbar() {
-    return <nav className="navbar">
+    return <div className="navbar">
         <a href="/" className="nav-title">Dashboard</a>
-        <ul className="navlinks">
-            <li>
-                <a href="./Account" className="navlink">Account</a>
-            </li>
-        </ul>
-    </nav>
+        <div className="navlinks">
+            <a href="./Account" className="navlink">Account</a>
+            <a href="./Messages" className="navlink">Messages</a>
+        </div>
+    </div>
 }
