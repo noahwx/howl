@@ -14,22 +14,21 @@ export default function Auth() {
       if (error) throw error
       alert('Check your email for the login link!')
     } catch (error) {
-      alert(error.error_description || error.message)
+      alert('Please enter a email address!')
     } finally {
       setLoading(false)
     }
   }
 
   return (
-    <div className="row flex-center flex">
-      <div className="col-6 form-widget" aria-live="polite">
-        <h1 className="header">Supabase + React</h1>
-        <p className="description">Sign in via magic link with your email below</p>
+    <div className="form-container">
+      <div className="form-widget" aria-live="polite">
+        <h1 className="header">Howl</h1>
+        <p className="description">Sign up via magic link with your email below</p>
         {loading ? (
           'Sending magic link...'
         ) : (
           <form onSubmit={handleLogin}>
-            <label htmlFor="email">Email</label>
             <input
               id="email"
               className="inputField"
@@ -38,7 +37,7 @@ export default function Auth() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button className="button block" aria-live="polite">
+            <button className="button" aria-live="polite">
               Send magic link
             </button>
           </form>

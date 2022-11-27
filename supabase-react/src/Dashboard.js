@@ -1,14 +1,12 @@
-import { supabase } from './supabaseClient'
+import './index.css'
+import Navbar from './Navbar'
+import Main from './Main'
 
-const Dashboard = () => {
+export default function Dashboard(){
     return (
         <div>
-            <h1>Dashboard</h1>
-            <div>
-                
-            </div>
+            <Navbar />
+            <Main />
         </div>
-    );
-}
- 
-export default Dashboard;
+    )
+};
